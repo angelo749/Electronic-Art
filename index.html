@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+    }
+
+    #login {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      width: 320px;
+    }
+
+    h1 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.3);
+      color: #fff;
+    }
+
+    #keypad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .key {
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: none;
+      background: rgba(255, 255, 255, 0.3);
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .key:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #333;
+      cursor: none;
+    }
+
+    .key:active {
+      transform: scale(0.95);
+    }
+
+    #controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .control-btn {
+      flex: 1;
+      padding: 15px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: none;
+      background: rgba(255, 255, 255, 0.3);
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .control-btn:hover {
+      background: rgba(255, 255, 255, 0.6);
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="login">
+    <h1>Login</h1>
+    <input id="login-code" placeholder="Ingrese el código" disabled>
+
+    <div id="keypad">
+      <button class="key" onclick="loginKey(1)">1</button>
+      <button class="key" onclick="loginKey(2)">2</button>
+      <button class="key" onclick="loginKey(3)">3</button>
+      <button class="key" onclick="loginKey(4)">4</button>
+      <button class="key" onclick="loginKey(5)">5</button>
+      <button class="key" onclick="loginKey(6)">6</button>
+      <button class="key" onclick="loginKey(7)">7</button>
+      <button class="key" onclick="loginKey(8)">8</button>
+      <button class="key" onclick="loginKey(9)">9</button>
+      <button class="key" onclick="loginClear()">X</button>
+      <button class="key" onclick="loginKey(0)">0</button>
+      <button class="key" onclick="loginConfirm()">→</button>
+    </div>
+  </div>
+
+  <script>
+    let code = "";
+
+    function loginKey(num) {
+      if (code.length < 6) { 
+        code += num;
+        document.getElementById("login-code").value = code;
+      }
+    }
+
+    function loginClear() {
+      code = "";
+      document.getElementById("login-code").value = "";
+    }
+
+    function loginConfirm() {
+      if (code === "123456") {
+        window.location.href = "index.html"; // Redirige a la página deseada
+      } else {
+        alert("Código incorrecto");
+        loginClear();
+      }
+    }
+  </script>
+
+</body>
+</html>

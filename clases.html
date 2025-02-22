@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CLASES</title>
+  <style>
+ .cla{
+   text-align: center;
+ }
+  /* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  height: 100vh;
+}
+
+/* Contenedor de la animación */
+.container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo y animación del logo EA */
+.ea-logo {
+  font-size: 100px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.e {
+  color: #2475C2;
+  transform: scale(0);
+  animation: growE 1s forwards;
+}
+
+.a {
+  color: #BEA306;
+  opacity: 0;
+  animation: fadeInA 2s 1s forwards;
+}
+
+/* Animaciones */
+@keyframes growE {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInA {
+  to {
+    opacity: 1;
+  }
+}
+    body{
+      background: #000000;
+      color: white;
+    }
+.youtube{
+  text-align: center;
+}
+button{
+  background: papayawhip;
+  color: black;
+  border-radius: 70px;
+  padding: 7px 17px;
+}
+img{
+  margin: 15px 0px 0px 0px;
+}
+.h{
+  background: bisque;
+  border-radius: 70px;
+  padding:;
+}
+  </style>
+</head>
+
+<body>
+  <h1 class="cla">CLASES</h1>
+  <h3><b>CLASE 1:</b></h3>
+  <p>
+    ¿Qué es la ELECTRONICA? La electrónica es una disciplina que estudia y produce sistemas físicos basados en la conducción de electrones o partículas cargadas. Conoce su origen, sus campos de aplicación y su importancia para la tecnología y la sociedad.
+  </p>
+  <br>
+  <div class="youtube">
+    <a href="https://youtube.com/@electronicart-u9b?si=m2gRCyaztDHWABYv">
+      <button>
+        AQUI LAS CLASES POR YOUTUBE
+      </button>
+    </a>
+  </div>
+  <img width="100%" src="https://th.bing.com/th/id/OIP.gUO0s4tFcyIJOBh1qyXvVwHaFH?dpr=3&pid=ImgDetMain" />
+    <!-- Contenedor del Logo Animado -->
+  <div class="container">
+    <div class="ea-logo">
+      <span class="e">E</span>
+      <span class="a">A</span>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INICIO</title>
+  <style>
+ .ini{
+   text-align: center;
+ }
+  /* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  height: 100vh;
+}
+
+/* Contenedor de la animación */
+.container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo y animación del logo EA */
+.ea-logo {
+  font-size: 100px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.e {
+  color: #2475C2;
+  transform: scale(0);
+  animation: growE 1s forwards;
+}
+
+.a {
+  color: #BEA306;
+  opacity: 0;
+  animation: fadeInA 2s 1s forwards;
+}
+
+/* Animaciones */
+@keyframes growE {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInA {
+  to {
+    opacity: 1;
+  }
+}
+    body{
+      background: #000000;
+      color: white;
+    }
+    button{
+      background: bisque;
+      border-radius: 70px;
+    }
+    .soporte{
+      text-align: center;
+      margin: 10px 0px 0px 0px;
+    }
+    .bsop{
+      background: white;
+      color: black;
+      padding: 10px 26px;
+      border: none;
+      border-radius: 80px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="ini">INICIO</h1>
+  <h3><b>Bienvenido a Electronic Art</b></h3
+  >
+  <p>
+    Aquí estamos para ayudarte en todo, te enseñamos Electronica totalmente gratis y te compartimos nuestros proyectos para que puedas expreasar mejoras u opiniones para ello.
+  </p>
+  <br>
+  <img width="100%" src="https://www.electrogenios.com/wp-content/uploads/2020/05/Electricidad-y-Electronica-Perito-Industrial-1024x576.jpg" />
+  <div class="soporte">
+    <a href="Soporte.html">
+      <button class="bsop">
+        SOPORTE AQUÍ
+      </button>
+    </a>
+  </div>
+    <!-- Contenedor del Logo Animado -->
+  <div class="container">
+    <div class="ea-logo">
+      <span class="e">E</span>
+      <span class="a">A</span>
+    </div>
+  </div> 
+</body>
+
+</html>
